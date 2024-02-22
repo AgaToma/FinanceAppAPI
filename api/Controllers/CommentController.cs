@@ -59,6 +59,7 @@ namespace api.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+
             if(!await _stockRepo.StockExists(stockId))
             {
                 return BadRequest("Stock does not exists");
