@@ -8,6 +8,7 @@ using api.Mappers;
 using api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
+using api.Helpers;
 
 
 namespace api.Controllers
@@ -28,17 +29,16 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] CommentQueryObject queryObject)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var comments = await _commentRepo.GetAllAsync();
+            var comments = await _commentRepo.GetAllAsync(queryObject);
 
-            var CommentDto = comments.Select(s => s.ToCommentDto());
+            var commentDto = comments.Select(s => s.ToCommentDto());
 
-            return Ok(CommentDto);
-
+            return Ok(commentDto);
         }
 
         [HttpGet("{id:int}")]
