@@ -136,3 +136,4 @@ C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\runtimes\win\l
 C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\obj\Debug\net8.0\api.sourcelink.json
+C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\Newtonsoft.Json.dll
