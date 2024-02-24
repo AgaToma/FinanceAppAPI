@@ -17,9 +17,5 @@ namespace api.Dtos.Stock
         public long MarketCap { get; set; }
         public List<CommentDto> Comments { get; set; }
 
-        //public StockDto(List<CommentDto> comments)
-        //{
-        //    Comments = comments;
-        //}
     }
 }
