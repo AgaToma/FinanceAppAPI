@@ -13,7 +13,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace api.Controllers
 {
     [Route("api/portfolio")]
-    public class PortfolioController: ControllerBase
+    [ApiController]
+    public class PortfolioController : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly IStockRepository _stockRepo;
@@ -31,7 +32,7 @@ namespace api.Controllers
         [Authorize]
         public async Task<IActionResult> GetUserPortfolio()
         {
-            var username = User.GetUserName();
+            var username = User.GetUsername();
             var appUser = await _userManager.FindByNameAsync(username);
             var userPortfolio = await _portfolioRepo.GetUserPortfolio(appUser);
             return Ok(userPortfolio);

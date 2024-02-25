@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using api.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace api.Data
 {
@@ -36,6 +37,21 @@ namespace api.Data
                 .HasOne(u => u.Stock)
                 .WithMany(u => u.Portfolios)
                 .HasForeignKey(p => p.StockId);
+
+            List<IdentityRole> roles = new List<IdentityRole>
+            {
+                new IdentityRole
+                {
+                    Name = "Admin",
+                    NormalizedName = "ADMIN"
+                },
+                new IdentityRole
+                {
+                    Name = "User",
+                    NormalizedName = "USER"
+                }
+            };
+            builder.Entity<IdentityRole>().HasData(roles);
 
 
     }
