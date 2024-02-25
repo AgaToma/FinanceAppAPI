@@ -144,3 +144,6 @@ C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\Microsoft.AspN
 C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\mugoi\OneDrive\Documents\FinanceApp\api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

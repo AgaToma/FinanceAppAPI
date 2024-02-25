@@ -9,7 +9,7 @@ using api.Models;
 using Microsoft.EntityFrameworkCore.Storage.Json;
 using Newtonsoft.Json;
 
-namespace api.Services
+namespace api.Service
 {
     public class FMPService : IFMPService
     {
