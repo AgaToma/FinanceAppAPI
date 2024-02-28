@@ -11,7 +11,7 @@ type UserContextType = {
     token: string | null;
     registerUser: (email: string, username: string, password: string) => void;
     loginUser: (username: string, password: string) => void;
-    logoutUser: ( ) => void;
+    logout: ( ) => void;
     isLoggedIn: () => boolean;
 };
 
@@ -26,7 +26,7 @@ export const UserProvider = ({ children }: Props) => {
     const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
-        const user = localStorage.gotItem("user");
+        const user = localStorage.getItem("user");
         const token = localStorage.getItem("token");
         if(user && token) {
             setUser(JSON.parse(user));
@@ -80,7 +80,7 @@ export const UserProvider = ({ children }: Props) => {
         setUser(null);
         setToken("");
         navigate("/");
-    }
+    };
 
     return(
         <UserContext.Provider value={{ loginUser, user, token, logout, isLoggedIn, registerUser }}
